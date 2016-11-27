@@ -4,13 +4,54 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>svg演示</title>
+		
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			var cxt=c.getContext("2d");
+			cxt.fillStyle="#FF0000";
+			cxt.fillRect(0,0,150,75);
+			
+			
+			<!--鼠标移动 显示坐标-->
+			function cnvs_getCoordinates(e)
+			{
+				x=e.clientX;
+				y=e.clientY;
+				document.getElementById("xycoordinates").innerHTML="Coordinates: (" + x + "," + y + ")";
+			}
+			 
+			function cnvs_clearCoordinates()
+			{
+				document.getElementById("xycoordinates").innerHTML="";
+			}
+		</script>
+		
+		
 	</head>
 	
 	<body>
+		<p>固定的svg显示</p>
 		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
 			<polygon points="100,10 40,180 190,60 10,60 160,180"
 			style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;">
 		</svg>
+		<b/>
+		<b/>
+		<b/>
+		<b/>
+		<b/>
+		<!--cannvas学习 http://www.w3school.com.cn/html/html5_canvas.asp-->
+		<canvas id="myCanvas" width="200" height="100"></canvas>
+		
+		
+		<b/>
+		<b/>
+		<b/>
+		<b/>
+		<b/>
+		<p>把鼠标悬停在下面的矩形上可以看到坐标：</p>
+		<div id="coordiv" style="float:left;width:199px;height:99px;border:1px solid #c3c3c3" onmousemove="cnvs_getCoordinates(event)" onmouseout="cnvs_clearCoordinates()"></div>
+
 	</body>
 </html>
 
