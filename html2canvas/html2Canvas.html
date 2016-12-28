@@ -2,12 +2,12 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<title>javascript½«html´úÂë»æÖÆÎªÍ¼Æ¬</title>
+<title>javascriptå°†htmlä»£ç ç»˜åˆ¶ä¸ºå›¾ç‰‡</title>
 <style>#render{position:absolute;left:0;top:0;display:none}</style>
 </head>
 <body onLoad=''><div id="render"></div>
-ÇëÊäÈëhtml´úÂë£º<textarea id="html" rows="8" cols="80"><b style="color:red">html´úÂë</b><br />ºÃºÃ</textarea><br />
-<input type="button" onclick="renderHTMLAndSave()" value="½«textareaÊäÈëµÄhtml»æÖÆµ½canvas" /><br />
+è¯·è¾“å…¥htmlä»£ç ï¼š<textarea id="html" rows="8" cols="80"><b style="color:red">htmlä»£ç </b><br />å¥½å¥½</textarea><br />
+<input type="button" onclick="renderHTMLAndSave()" value="å°†textareaè¾“å…¥çš„htmlç»˜åˆ¶åˆ°canvas" /><br />
 <script type="text/javascript" src="html2canvas.js"></script>
 <script type="text/javascript">
     var canvas,render,html;
@@ -16,9 +16,9 @@
             render = document.getElementById('render');
             html = document.getElementById('html');
         }
-        render.style.display = 'block';//±ØĞëÒªÏÔÊ¾£¬Òª²»»æÖÆ²»³öÀ´
-        if (canvas) document.body.removeChild(canvas);//É¾³ıÉÏÒ»´ÎÉú³ÉµÄcanvas¶ÔÏó
-        render.innerHTML = html.value;//ÉèÖÃÏÔÊ¾ÈİÆ÷³ÊÏÖhtml UI
+        render.style.display = 'block';//å¿…é¡»è¦æ˜¾ç¤ºï¼Œè¦ä¸ç»˜åˆ¶ä¸å‡ºæ¥
+        if (canvas) document.body.removeChild(canvas);//åˆ é™¤ä¸Šä¸€æ¬¡ç”Ÿæˆçš„canvaså¯¹è±¡
+        render.innerHTML = html.value;//è®¾ç½®æ˜¾ç¤ºå®¹å™¨å‘ˆç°html UI
         html2canvas(render).then(function (canvas) {
             render.style.display = 'none';
             window.canvas = canvas;
